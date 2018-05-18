@@ -10,11 +10,11 @@ import com.rcdts.utld.inter.exception.ScoreInputException;
 
 public class ScoreProcessor {
 	
-	public int totalScore;
+	
 	
 	public int processScoreToPoints(String allScore) throws ScoreInputException {
 
-		System.out.println("call me again !!");
+		
 		ScoreCalculatorImpl scoreCalculatorImpl= new ScoreCalculatorImpl();
 		ScoreSplitterImpl scoreSplitterImpl = new ScoreSplitterImpl();
 
@@ -25,9 +25,9 @@ public class ScoreProcessor {
 		scoreList.forEach(inputScore -> validate.validateScore(inputScore));
 
 		scoreList.stream().filter(eachStrScore -> eachStrScore.endsWith(Constants.HOME))
-				.forEach(eachStrScore -> scoreCalculatorImpl.scoreCalculatorRCDTSUtld.calculateScore(totalScore, eachStrScore));
+				.forEach(eachStrScore -> scoreCalculatorImpl.scoreCalculatorRCDTSUtld.calculateScore( eachStrScore));
 
-		System.out.println("Total Score second !! :" + scoreCalculatorImpl.getTotalScore());
+		
 		
 		return scoreCalculatorImpl.getTotalScore();
 
@@ -43,7 +43,7 @@ public class ScoreProcessor {
 
 	{
 
-		System.out.println(s);
+	
 
 		return true;
 

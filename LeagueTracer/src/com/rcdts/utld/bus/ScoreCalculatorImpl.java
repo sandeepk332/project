@@ -15,13 +15,8 @@ public class ScoreCalculatorImpl {
 		this.totalScore = totalScore;
 	}
 
-	public ScoreCalculator scoreCalculatorRCDTSUtld = ( int previousScore, String eachScore) -> {
+	public ScoreCalculator scoreCalculatorRCDTSUtld = (  String eachScore) -> {
 
-		//System.out.println("in loop:" + previousTotalScore);
-
-		System.out.println("in loop each:" + eachScore);
-
-		//totalScore = previousTotalScore;
 
 		String trimSc = eachScore.trim();
 

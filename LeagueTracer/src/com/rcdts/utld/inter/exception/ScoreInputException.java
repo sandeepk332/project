@@ -1,10 +1,14 @@
 package com.rcdts.utld.inter.exception;
 
-public class ScoreInputException extends Throwable {
+public class ScoreInputException extends Exception {
 	
-	ScoreInputException(String message){
+	public ScoreInputException(String message){
 		super(message);
 		
+	}
+
+	public ScoreInputException() {
+		// TODO Auto-generated constructor stub
 	}
 
 }
