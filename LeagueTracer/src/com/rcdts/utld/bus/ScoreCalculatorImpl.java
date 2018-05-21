@@ -5,7 +5,7 @@ import com.rcdts.utld.inter.ScoreCalculator;
 
 public class ScoreCalculatorImpl {
 	
-	int totalScore = 0;
+	private int totalScore = 0;
 
 	public int getTotalScore() {
 		return totalScore;
@@ -21,10 +21,11 @@ public class ScoreCalculatorImpl {
 		String trimSc = eachScore.trim();
 
 		String[] twoScore = trimSc.split(Constants.SPLIT);
+		String secondScore = twoScore[1].replaceFirst(".$","");
 
 		int hometeamScore = Integer.parseInt(twoScore[0]);
 
-		int otherteamScore = Integer.parseInt(twoScore[1].substring(0, 1));
+		int otherteamScore = Integer.parseInt(secondScore);
 
 		if (otherteamScore == hometeamScore) {
 

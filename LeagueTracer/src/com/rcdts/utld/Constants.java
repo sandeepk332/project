@@ -13,5 +13,7 @@ public class Constants {
 	public static final String AWAY = "A";
 	
 	public static final String EACH_SCORE_COMMA = ",";
+	
+	public static final String ERROR_MESSAGE = "Please enter valid, comma separated scores eg 4-1A, 2-1H, 1-1H.";
 
 }

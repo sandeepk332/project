@@ -24,8 +24,10 @@ public class LeagueScoreApp {
 
 	public static void main(String[] args)throws Exception {
 
-		// TODO Auto-generated method stub
-		try {
+		
+		
+			
+		if(args == null || !(args.length >0))throw new ScoreInputException(Constants.ERROR_MESSAGE); ;
 		
 		List<String> listArgs = Arrays.asList(args);
 		StringBuilder builder = new StringBuilder();
@@ -41,10 +43,7 @@ public class LeagueScoreApp {
 		
 		System.out.println("Total Score:" + totalScore);
 		
-		}catch(Throwable e)
-		{
-			 
-		}
+
 
 	}
 

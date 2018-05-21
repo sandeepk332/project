@@ -67,8 +67,7 @@ public class LeagueScoreAppTest {
 		LeagueScoreApp.main(args);
 		assertEquals("Score for arguments should be 12",12,LeagueScoreApp.totalScore);
 		
-		
-		//fail("Not yet implemented");
+	
 	}
 	
 	@Test
@@ -106,5 +105,56 @@ public class LeagueScoreAppTest {
 		
 		
 	}
+	
+	@Test(expected = com.rcdts.utld.inter.exception.ScoreInputException.class)
+	public void testScoreAppNoArguments() throws Exception {
+		
+		String [] args = null;
+		
+		LeagueScoreApp.main(args);
+		
+		
+		
+		
+	}
+	
+	@Test(expected = com.rcdts.utld.inter.exception.ScoreInputException.class)
+	public void testScoreAppInValidCommaArguments() throws Exception {
+		
+		String [] args = {",",","};
+		
+		LeagueScoreApp.main(args);
+		
+		
+		
+		
+	}
+	
+	@Test
+	public void testScoreAppValidMixArguments() throws Exception {
+		
+		String [] args = {"4-1H,",",",""};
+		
+		LeagueScoreApp.main(args);
+		assertEquals("Score for arguments should be 3",3,LeagueScoreApp.totalScore);
+		
+		
+		
+		
+	}
+	
+	@Test(expected = com.rcdts.utld.inter.exception.ScoreInputException.class)
+	public void testScoreAppBlankSpaceArguments() throws Exception {
+		
+		String [] args = {"   "," "};
+		
+		LeagueScoreApp.main(args);
+		
+		
+		
+		
+	}
+	
+	
 
 }
