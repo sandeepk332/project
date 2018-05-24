@@ -25,7 +25,7 @@ public class ScoreCalculatorImpl {
 		
 		if(Constants.HOME.equals(awayOrHome)) {
 			
-			String secondScore = twoScore[1].replaceFirst(".$","");
+			String secondScore = truncateHorAfromScoreForParsing(twoScore[1]);
 	
 			int hometeamScore = Integer.parseInt(twoScore[0]);
 	
@@ -44,7 +44,7 @@ public class ScoreCalculatorImpl {
 			}
 		}else {//away team
 			
-			String secondScore = twoScore[1].replaceFirst(".$","");
+			String secondScore = truncateHorAfromScoreForParsing(twoScore[1]);
 			
 			int otherteamScore = Integer.parseInt(twoScore[0]);
 	
@@ -68,5 +68,10 @@ public class ScoreCalculatorImpl {
 		return totalScore;
 
 	};
+	
+	private String truncateHorAfromScoreForParsing(String score) {
+		
+		return score.replaceFirst(".$","");
+	}
 
 }

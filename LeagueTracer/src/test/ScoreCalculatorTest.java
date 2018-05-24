@@ -14,7 +14,7 @@ public class ScoreCalculatorTest {
 		
 		ScoreCalculatorImpl scoreCalculatorImpl= new ScoreCalculatorImpl();
 		
-		String score = "1-1H";
+		String score = "1-1A";
 		
 		scoreCalculatorImpl.scoreCalculatorRCDTSUtld.calculateScore(score);
 		
