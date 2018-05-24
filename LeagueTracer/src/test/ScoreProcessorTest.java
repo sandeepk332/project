@@ -143,5 +143,41 @@ public class ScoreProcessorTest {
 		
 		
 	}
+	
+	@Test
+	public void testRCDTSUTDAwayTeamWin() throws Exception {
+		
+		
+		
+		String scores = "2-3A";
+		
+		int totalScore = new ScoreProcessor().processScoreToPoints(scores);
+		
+		
+		assertEquals("Score for arguments should be 3", 3, totalScore);
+		
+
+		
+		
+		
+	}
+	
+	@Test
+	public void testRCDTSUTDTotalPoints() throws Exception {
+		
+		
+		
+		String scores = "4-3H,1-0A,4-0A,3-0H,0-0A,2-0H,2-0H,2-1A,2-5A,2-1H,3-1A,2-0H,0-1A,5-0H,1-3H,1-1A,0-0A,1-0H,3-3H,2-3A,1-1A,2-2H,2-1A,4-1H,3-1A,5-1H,1-0A,0-3H,2-1A,3-0H,3-0H,3-2H,2-1A,4-1H,2-1A,5-0H,3-1A,0-1A";
+		
+		int totalScore = new ScoreProcessor().processScoreToPoints(scores);
+		
+		
+		assertEquals("Score for arguments should be 63", 63, totalScore);
+		
+
+		
+		
+		
+	}
 
 }

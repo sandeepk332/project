@@ -25,7 +25,8 @@ public class ScoreProcessor {
 		if(!validate(scoreList))throw new ScoreInputException(Constants.ERROR_MESSAGE); ;
 
 
-		scoreList.stream().filter(eachStrScore -> eachStrScore.endsWith(Constants.HOME))
+		scoreList.stream()
+		//.filter(eachStrScore -> eachStrScore.endsWith(Constants.HOME))
 				.forEach(eachStrScore -> scoreCalculatorImpl.scoreCalculatorRCDTSUtld.calculateScore( eachStrScore));
 
 		
